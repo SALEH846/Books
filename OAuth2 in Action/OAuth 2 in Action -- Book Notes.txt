@@ -1,0 +1,28 @@
+Chapter 2 -- The OAuth Dance
+============================
+- Canonical Oauth transaction steps -- Page: 49
+- When the resource owner asks the client to access some protected resource on his behalf then:
+	- Client redirects user agent (which the resource owner is using and is usually a browser) to authorization endpoint of the authorization server
+	- Then resource owner authenticates himself to the authorization server
+	- Then resource owner authorizes the client
+	- Then authorization server redirects user agent to client with authorization code
+	- Client sends authorization code and its own credentials to token endpoint of the authorization server
+	- Authorization server sends access token to the client
+	- Client sends access token to protected resource
+	- Protected resource returns resource to the client
+- Bearer tokens --> Which means that anyone whi carries the token has the right to use it
+- There are four main actors in OAuth system:
+	1. Client
+	2. Resource Owner
+	3. Authorization Servers
+	4. Protected Resources
+- OAuth access tokens (sometimes simply called tokens) are opaque to the client --> Client does need to understand the content of it
+- Access tokens are not opaque to everyone in the system -- authorization server's job is to issue the token and protected resource's job is to validate the token
+- OAuth scope is a representation of a set of rights at a protected resource -- represented by strings -- mechanism for limiting the access granted to the client
+	- Scopes are defined by the protected resource
+	- Authorization server can allow the resource owner to grant or deny particular scopes to a given client during its request
+- Refresh tokens:
+	- issued to the client by the authorization server
+	- never sent to the protected resource
+	- client uses the refresh token to request new access tokens without involving the resource owner
+	- 
