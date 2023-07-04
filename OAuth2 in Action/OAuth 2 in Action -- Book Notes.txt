@@ -25,4 +25,5 @@ Chapter 2 -- The OAuth Dance
 	- issued to the client by the authorization server
 	- never sent to the protected resource
 	- client uses the refresh token to request new access tokens without involving the resource owner
-	- 
+- OAuth is an HTTP based protocol
+- 
