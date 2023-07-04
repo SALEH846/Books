@@ -26,4 +26,9 @@ Chapter 2 -- The OAuth Dance
 	- never sent to the protected resource
 	- client uses the refresh token to request new access tokens without involving the resource owner
 - OAuth is an HTTP based protocol
+
+Chapter 3 -- Building a simple OAuth Client
+===========================================
+- Each client needs to have a unique identifier at a given authorization server. That's why, this unique identifier is almost always assigned by the authorization server to the client
+- Every client has id as well as secret which it uses to authenticate itself when talking to authorization server
 - 
